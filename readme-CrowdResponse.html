@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>readme-free</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/*  GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<h1>CrowdResponse</h1>
+<p><em>CrowdResponse</em> is a small Windows console application designed to aid in the gathering of system information for incident response engagements. Output is in XML format in one monolithic file.</p>
+<p>The file <em>CrowdResponse.exe</em> is a stub application that contains and drops the appropriate version of the actual tool (<em>CrowdResponse32.exe</em> or <em>CrowdResponse64.exe</em>) after determining the operating system architecture (32 or 64 bit). The tool is then launched with the provided command line parameters. Supported operating system versions are Windows XP onwards.</p>
+<p>The application contains numerous sub-tools (modules), each of them invoked by providing specific command line parameters to the main application. These modules are all built in to the main application and are custom written in C++, utilizing the Win32 API to achieve their functionality. The application is statically linked to the C/C++ runtime so as to avoid unnecessary dependencies.</p>
+<p><em>CrowdResponse</em> should be launched with <strong>elevated administrative privileges</strong> to achieve the desired results.</p>
+<h1>tl;dr (too long; didn't read)</h1>
+<p>Obtain the example/default configuration file <em>config.txt</em> and issue the following command to read from that config file and output results to the file <em>out.xml</em>, verbose mode on.</p>
+<pre><code>CrowdResponse -v -i config.txt -o out.xml
+</code></pre>
+
+<hr />
+<h1>Contents</h1>
+<ul>
+<li><a href="#Usage">Usage</a></li>
+<li><a href="#Masks">A Note on File Masks and Filters</a></li>
+<li><a href="#Fileops">File Operations</a></li>
+<li><a href="#Modules">Modules</a></li>
+<li><a href="#Order">Module Operation Order</a></li>
+<li><a href="#Embed">Embedding a Configuration File</a></li>
+</ul>
+<hr />
+<p><a name="Usage"></a></p>
+<h1>Usage</h1>
+<p>Instantiation of the individual modules is performed by specifying them on the command line in the form:</p>
+<pre><code>CrowdResponse [opts] @tool_name [params] @tool_name [params]... etc.
+</code></pre>
+
+<p>This is the current syntax for the tool as seen when simply typing <strong><em>CrowdResponse</em></strong> at the command prompt:</p>
+<pre><code>CrowdStrike CrowdResponse
+  CrowdStrike Forensics Data Collection Tool
+  Version 1.0.6.0 (64 bit)
+  Copyright (C) CrowdStrike, Inc. 2016.  All rights reserved.
+  http://www.crowdstrike.com
+
+Syntax:
+
+CrowdResponse [-option &lt;param&gt;] @tool_name [tool_params] [...]
+
+  -c             Use low CPU priority (idle) to lessen load on the system
+  -d             Log basic application information to the registry
+  -e             Indent output XML for readability. Default Off
+  -f &lt;name&gt;      HTTP form item value name for -u. Default is file from -s
+  -g             Validate config file and exit
+  -i &lt;file/URL&gt;  Read configuration from file or URL
+  -k             Keep the output XML/CAB file when -x is used
+  -m &lt;duration&gt;  Maximum application run time in hh:mm:ss format
+  -n &lt;name&gt;      HTTP form item name for -u. Default is &quot;filename&quot;
+  -o &lt;file&gt;      Write output to specified file (overwrite)
+  -q &lt;size&gt;      Check disk space and exit if less than &lt;size&gt; MB free
+  -s &lt;rate/time&gt; Rate limit all HTTP writes/uploads
+  -t             Strict SSL certificate adherence. Default is ignore bad certs
+  -u &lt;url/dir&gt;   POSTs output file to HTTP(S) URL or copies file to directory
+  -v             Verbose output
+  -x             Self destruct. Delete this EXE and output file when app exits
+  -y             Web proxy for HTTP operations. Format [&lt;user&gt;:&lt;pass&gt;@]&lt;url&gt;
+  -Y             If proxy upload fails (-y) revert to no proxy and try again
+  -z             Compress output to a CAB archive and delete original XML
+
+In addition to regular system environment variables the naming of the output
+file used with -o and the input configuration file used with -i also
+understands the following:
+
+  %ad%       The application's directory path (includes trailing back-slash)
+  %hdnext%   Next hard drive after %systemdrive%
+  %hdprev%   Previous hard drive before %systemdrive%
+  %ip%       Primary IPv4 IP address
+  %nm%       NetBIOS computer name
+  %dm%       Windows domain name
+  %tm%       Current UTC date/time
+  %ve%       Application product version
+
+%hdnext% and %hdprev% resolve to &quot;?:&quot; if no drive is found.
+
+Supported Tool names:
+
+  DirList        Directory listing utility
+  Drivers        Win32 Drivers information
+  Handles        Enumerate process handles
+  Jobs           Windows 'at' jobs enumerator
+  Mal            A collection of malware/hacking detection checks
+  Prefetch       Windows Prefetch file processor
+  PSList         Process information
+  PSStrings      Extraction of strings from the memory of running processes
+  RegDump        Registry dump
+  RegFile        Finds references to files in registry strings
+  Sensor         CrowdStrike Falcon Host sensor information
+  Shim           App Compat Cache Registry parser
+  SuperFetch     Windows SuperFetch file processor
+  System         Report system information
+  Tasks          Windows Scheduled Tasks enumerator
+  Yara           YARA rules processing
+
+Examples:
+
+  @DirList &quot;%windir%&quot; -s -t properties,cam,sha1 -f *.exe
+  @DirList &quot;%SystemDrive%\Users\&quot; -s -i *\downloads\*
+  @DirList &quot;%windir%\system32\&quot; -s -e *drvstore*
+  @Drivers -t cam,properties,sha256
+  @Drivers
+  @Handles -p 3268
+  @Handles
+  @Jobs
+  @Mal -a sticky
+  @Mal -a dllinpath,dllsvchost
+  @Prefetch -s
+  @PSList -d -t cam,certs,md5
+  @PSList
+  @PSStrings -c 10
+  @PSStrings -P &quot;cmd\.exe&quot;
+  @RegDump &quot;hklm\software\Microsoft\windows\currentversion\run&quot; -s
+  @RegDump &quot;hkcu\Environment&quot;
+  @RegDump -s -r 10.1.2.3 &quot;hklm\Software\Microsoft\Windows NT\CurrentVersion&quot;
+  @RegFile &quot;hklm\software\Microsoft\windows\currentversion\run&quot; -s
+  @RegFile &quot;hklm\software\Microsoft\windows\currentversion\run&quot; -s -t all
+  @RegFile &quot;hkcu\Environment&quot;
+  @Sensor -c -s
+  @Shim -t md5,sha256
+  @SuperFetch -s
+  @Tasks
+  @Yara -y yarafiles -a -b
+
+For tool-specific syntax use:
+
+  CrowdResponse @tool_name -?
+</code></pre>
+
+<hr />
+<p><a name="Masks"></a></p>
+<h1>A Note on File Masks and Filters</h1>
+<p>Many of the modules support options to control which files are to be processed. They may include options for file <em>masks</em> and inclusion and exclusion <em>filters</em>.</p>
+<p>A file mask is handled first and this operates only on the file name component of the path. It is a simple wildcard match of the kind that the operating system itself understands (e.g. '*' and '?' characters). Any files that do not match the mask will not be considered.</p>
+<blockquote>
+<p>File masks operate on the short (8.3) version of the file name. This is an operating system constraint.</p>
+</blockquote>
+<p>Next we consider any provided <em>filters</em>.</p>
+<p>Filters are Perl compatible regular expressions intended to match the entire full file path of the file in question. If a file <em>inclusion</em> filter has been specified, any encountered files that do not match the expression will not be considered.</p>
+<p>Finally, if a file <em>exclusion</em> filter has been specified, any files that match the mask will not be considered, otherwise the file is then processed.</p>
+<p>When using filters watch out for the need to quote certain characters. For example, if you wanted to match all files that ended with the extension <em>.exe</em> or <em>.dll</em> you'd use something like this. Note the quoted dot:</p>
+<pre><code>@dirlist &quot;%ProgramFiles%&quot; -s -i &quot;\.(exe|dll)$&quot;
+</code></pre>
+
+<p>Similarly if you wanted to match all files within any sub-directory of the name &quot;<em>downloads</em>&quot; and with file extension <em>.exe</em> or <em>.dll</em> you'd use something like this. Note the quoted back-slashes:</p>
+<pre><code>@dirlist &quot;%systemdrive%\users\&quot; -i &quot;\\downloads\\.*\.(exe|dll)$&quot;
+</code></pre>
+
+<p>File filters can contain system environment variables that are expanded prior to being processed.</p>
+<hr />
+<p><a name="Fileops"></a></p>
+<h1>File Operations (<em>fileops</em>)</h1>
+<p>Several modules support the option to supply file operations (typically through option <strong><em>-t</em></strong>). These <em>fileops</em> act upon each file that the module processes and output the associated XML details. This is the list of options available:</p>
+<ul>
+<li>
+<strong>NAME</strong>
+<ul>
+<li>File name. Usually always on.</li>
+</ul>
+</li>
+<li>
+<strong>SIZE</strong>
+<ul>
+<li>File size in bytes. Usually always on.</li>
+</ul>
+</li>
+<li>
+<strong>ATTRIBUTES</strong>
+<ul>
+<li>File attributes. Usually always on.</li>
+</ul>
+</li>
+<li>
+<strong>CAM</strong>
+<ul>
+<li>File create, access and modify times.</li>
+</ul>
+</li>
+<li>
+<strong>XOFFLINE</strong> *
+<ul>
+<li>
+Ignore files with attribute <strong>FILE_ATTRIBUTE_OFFLINE</strong>.
+<ul>
+<li><em>The data of a file is not available immediately. This attribute indicates that the file data is physically moved to offline storage. This attribute is used by Remote Storage, which is the hierarchical storage management software. Applications should not arbitrarily change this attribute.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>XSPARSE</strong> *
+<ul>
+<li>
+Ignore files with attribute <strong>FILE_ATTRIBUTE_SPARSE</strong>.
+<ul>
+<li><em>A file that is a sparse file.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>XREPARSE</strong> *
+<ul>
+<li>
+Ignore files with attribute <strong>FILE_ATTRIBUTE_REPARSE_POINT</strong>.
+<ul>
+<li><em>A file or directory that has an associated reparse point, or a file that is a symbolic link.</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<strong>PROPERTIES</strong>
+<ul>
+<li>File properties including version, company name etc.</li>
+</ul>
+</li>
+<li>
+<strong>CERTS</strong>
+<ul>
+<li>Digital certificate reporting and validation.</li>
+</ul>
+</li>
+<li>
+<strong>MD5</strong>
+<ul>
+<li>MD5 hash of the file.</li>
+</ul>
+</li>
+<li>
+<strong>SHA1</strong>
+<ul>
+<li>SHA1 hash of the file.</li>
+</ul>
+</li>
+<li>
+<strong>SHA256</strong>
+<ul>
+<li>SHA256 hash of the file.</li>
+</ul>
+</li>
+<li>
+<strong>QMD5</strong>
+<ul>
+<li>Quick MD5 hash of the file (1st 512 bytes of the file).</li>
+</ul>
+</li>
+<li>
+<strong>QSHA1</strong>
+<ul>
+<li>Quick SHA1 hash of the file (1st 512 bytes of the file).</li>
+</ul>
+</li>
+<li>
+<strong>QSHA256</strong>
+<ul>
+<li>Quick SHA256 hash of the file (1st 512 bytes of the file).</li>
+</ul>
+</li>
+<li>
+<strong>ALL</strong>
+<ul>
+<li>NAME, SIZE, ATTRIBUTES, CAM, PROPERTIES, CERTS, MD5, SHA1, SHA256. </li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>* To ignore in this case means to not obtain file properties, hashes or certificate information from the file in question.</p>
+</blockquote>
+<p>When supplying the options on the command line or in a configuration file you can supply them individually</p>
+<pre><code>-t md5 -t sha256 -t certs
+</code></pre>
+
+<p>or more conveniently as a single string separated by commas</p>
+<pre><code>-t md5,sha256,certs
+</code></pre>
+
+<p>Typically the module will have a default minimal set of file operations (e.g. file name, size, attributes) and the user supplied options (above) append to that list.</p>
+<hr />
+<p><a name="Modules"></a></p>
+<h1>Modules</h1>
+<p>Here is the list of currently implemented modules.</p>
+<ul>
+<li>@<a href="#Main">Main</a></li>
+<li>@<a href="#DirList">DirList</a></li>
+<li>@<a href="#Drivers">Drivers</a></li>
+<li>@<a href="#Handles">Handles</a></li>
+<li>@<a href="#Jobs">Jobs</a></li>
+<li>@<a href="#Mal">Mal</a></li>
+<li>@<a href="#Prefetch">Prefetch</a></li>
+<li>@<a href="#PSList">PSList</a></li>
+<li>@<a href="#PSStrings">PSStrings</a></li>
+<li>@<a href="#RegDump">RegDump</a></li>
+<li>@<a href="#RegFile">RegFile</a></li>
+<li>@<a href="#Sensor">Sensor</a></li>
+<li>@<a href="#Shim">Shim</a></li>
+<li>@<a href="#SuperFetch">SuperFetch</a></li>
+<li>@<a href="#Tasks">Tasks</a></li>
+<li>@<a href="#YARA">YARA</a></li>
+</ul>
+<hr />
+<p><a name="Order"></a></p>
+<h1>Module Operation Order</h1>
+<p>The order in which modules are specified on the command line or in a configuration file has no bearing on the order in which they are executed. This is intentional and is an attempt to gather important dynamic information from the system before the application itself affects them.</p>
+<p>The order of execution of modules is driven by an internal list as follows:</p>
+<table>
+
+<tr>
+<td>1. Main</td>
+<td>9. Sensor</td>
+</tr>
+
+<tr>
+<td>2. System</td>
+<td>10. Regdump</td>
+</tr>
+
+<tr>
+<td>3. Handles</td>
+<td>11. Regfile</td>
+</tr>
+
+<tr>
+<td>4. Pslist</td>
+<td>12. Shim</td>
+</tr>
+
+<tr>
+<td>5. Yara</td>
+<td>13. Drivers</td>
+</tr>
+
+<tr>
+<td>6. Psstrings</td>
+<td>14. Jobs</td>
+</tr>
+
+<tr>
+<td>7. Mal</td>
+<td>15. Tasks</td>
+</tr>
+
+<tr>
+<td>8. Dirlist</td>
+<td>16. Superfetch</td>
+</tr>
+
+<tr>
+</tr>
+
+</table>
+<hr />
+<p><a name="Main"></a></p>
+<h1>@Main</h1>
+<h2>Main Tool Options</h2>
+<h3>Overview</h3>
+<p>The @Main tool module is only intended to be used within a configuration file (global option -i) as a means to produce a self-contained configuration and to reduce the number of parameters required on the actual command line. Parameters supplied to the @main tool are global options for the main application.</p>
+<h3>Usage</h3>
+<blockquote>
+<p>See <a href="#MainOptions">Main Application Options</a> at the end of this document for a full description of global options that can be supplied to the tool.</p>
+</blockquote>
+<hr />
+<p><a name="DirList"></a></p>
+<h1>@DirList</h1>
+<h2>Directory listing</h2>
+<h3>Overview</h3>
+<ul>
+<li>optional directory recursion</li>
+<li>ability to specify file masks</li>
+<li>handles environment variables (e.g. &quot;%windir%&quot;)</li>
+<li>optional digital signature validation</li>
+<li>optional display of resource information</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @DirList [-sx] [-ei &lt;flt&gt;] [-f &lt;msk&gt;] [-p &lt;dep&gt;] [-t &lt;ops&gt;] [-z &lt;sz&gt;] &lt;dir&gt;
+
+ -e &lt;filter&gt;   - Path exclusion regex filter pattern
+ -f &lt;mask&gt;     - File name mask. Default is &quot;*.*&quot;
+ -i &lt;filter&gt;   - Path inclusion regex filter pattern
+ -p &lt;depth&gt;    - Recursion depth (0 = top level only, 1 = 1 level down etc)
+ -s            - Recursive listing
+ -t &lt;fileops&gt;  - Comma separated file operations
+ -x            - Only process Windows executable (PE) files
+ -z &lt;size&gt;     - Don't hash files greater than this size in megabytes
+ &lt;dir&gt;         - Directory to start listing from
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes
+
+Environment variables are automatically expanded in &lt;dir&gt; and &lt;filter&gt;.
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<p>Do a basic directory listing of the Windows directory</p>
+<pre><code>CrowdResponse @dirlist &quot;%windir%&quot;
+</code></pre>
+
+<p>Do a listing of a directory but only look for exe files</p>
+<pre><code>CrowdResponse @dirlist &quot;%windir%&quot; -f *.exe
+</code></pre>
+
+<p>Do a listing of a directory and all sub-directories but only look for file names with an extension of exe</p>
+<pre><code>CrowdResponse @dirlist &quot;%windir%&quot; -f *.exe -s
+</code></pre>
+
+<p>Do a recursive listing of the root drive but only report files in path names that match &quot;*\downloads*&quot;</p>
+<pre><code>CrowdResponse @dirlist &quot;%homedrive%&quot; -i &quot;*\downloads\*&quot; -s
+</code></pre>
+
+<blockquote>
+<p>The filters used for -e and -i are Perl compatible regular expressions. All files and directories in the provided search path are considered but for the result to be displayed the full file path string under examination must match the include filter and must not match the exclude filter (if they are provided).</p>
+</blockquote>
+<hr />
+<p><a name="Drivers"></a></p>
+<h1>@Drivers</h1>
+<h2>Windows Drivers enumeration</h2>
+<h3>Overview</h3>
+<ul>
+<li>name of module</li>
+<li>base address of module</li>
+<li>full file details (as with @pslist)</li>
+<li>optional verify digital certificates (-c)</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Drivers [-t &lt;ops&gt;] [-z &lt;size&gt;]
+
+ -t &lt;fileops&gt;  - Comma separated file operations
+ -z &lt;size&gt;     - Don't hash files greater than this size in megabytes
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show all driver information</p>
+<pre><code>CrowdResponse @Drivers
+</code></pre>
+
+<hr />
+<p><a name="Handles"></a></p>
+<h1>@Handles</h1>
+<h2>Handles dump</h2>
+<h3>Overview</h3>
+<ul>
+<li>dumps handle IDs, type and name of an all processes</li>
+<li>optional dumping of handles, type, name for an individual specified process ID</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Handles [-p &lt;PID&gt;]
+
+ -p &lt;PID&gt;      - Process ID to dump from. Default is all processes
+</code></pre>
+
+<h3>Examples</h3>
+<p>List handles of all processes</p>
+<pre><code>CrowdResponse @handles
+</code></pre>
+
+<p>List handles of a particular process ID</p>
+<pre><code>CrowdResponse @handles -p 3228
+</code></pre>
+
+<hr />
+<p><a name="Mal"></a></p>
+<h1>@Mal</h1>
+<h2>A collection of malware/hacking detection tests</h2>
+<h3>Overview</h3>
+<ul>
+<li>find evidence of malicious use of Windows &quot;<em>Sticky Keys</em>&quot; functionality.</li>
+<li>detect potential DLL hijacking</li>
+</ul>
+<p>Actions are specified with a string using option <strong>-a</strong>.</p>
+<p>Currently four separate checks are performed with this option.</p>
+<h3><em>dllinpath</em></h3>
+<p>Performs checking of DLL file name conflicts <em>within</em> each directory found in the environment variable <strong>PATH</strong>. i.e looks for the same base DLL file name being present inside 2 or more <strong>PATH</strong> directories.</p>
+<h3><em>dlloutpath</em></h3>
+<p>Performs checking of DLL file name conflicts for files <strong>not</strong> found in a <strong>PATH</strong> directory against those found <strong>in</strong> a <strong>PATH</strong> directory.</p>
+<p>Directories (<em>DllDirectory</em> and <em>DllDirectory32</em>) and files listed at <em>SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</em> will be ignored.</p>
+<h3><em>dllsvchost</em></h3>
+<p>Examines <em>all</em> <strong>svchost.exe</strong> processes (Windows services) that are running and for each one analyzes the list of modules that the process has loaded. If any module of the same base file name (DLL) is loaded at a different path than another a conflict is reported.</p>
+<blockquote>
+<p>If a conflict is determined full details of both files are reported. The amount of detail can be controlled using the <em>fileops</em> option <strong>-t</strong>.</p>
+</blockquote>
+<h3><em>sticky</em></h3>
+<p>This option is for detecting if the <em>Sticky Keys</em> accessibility feature is being utilized in a malicious manner:</p>
+<ul>
+<li>
+<p>Check for <em>sethc.exe</em>, <em>utilman.exe</em>, <em>magnify.exe</em>, <em>osk.exe</em>, <em>narrator.exe</em>, <em>displayswitch.exe</em> in the system directory (e.g. <em>C:\Windows\system32\</em>).</p>
+<ul>
+<li>Determine if they are genuine and not substitutes.</li>
+<li>
+Vulnerability is TRUE if
+<ul>
+<li>File properties &quot;<em>Company Name</em>&quot; is not &quot;<em>Microsoft Corporation</em>&quot; OR</li>
+<li>File properties &quot;<em>Internal Name</em>&quot; is not as expected OR</li>
+<li>Digital certificate is not valid or not signed as &quot;<em>Microsoft Windows</em>&quot;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Check the registry at <em>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\[files from above] for the &quot;</em>Debugger*&quot; name and extract the associated file path value.</p>
+<ul>
+<li>
+Vulnerability is TRUE if
+<ul>
+<li>Debugger value is present</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Mal -a &lt;actions&gt; [-ei &lt;filter&gt;] [-p &lt;depth&gt;] [-t &lt;fileops&gt;] [&lt;dir&gt;]
+
+ -a &lt;actions&gt;  - Comma separated list of actions/checks to perform
+ -e &lt;filter&gt;   - Path exclusion regex filter pattern
+ -i &lt;filter&gt;   - Path inclusion regex filter pattern
+ -p &lt;depth&gt;    - Recursion depth (0 = top level only, 1 = 1 level down etc)
+ -t &lt;fileops&gt;  - Comma separated file operations
+ &lt;dir&gt;         - Start directory for 'dlloutpath'. Default &quot;%SystemDrive%\&quot;
+
+Actions      : dllinpath,dlloutpath,dllsvchost,dllall,sticky,all
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes,properties,certs
+
+Environment variables are automatically expanded in &lt;dir&gt; and &lt;filter&gt;.
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Look for Sticky Keys maliciousness.</p>
+<pre><code>CrowdResponse @Mal -a sticky
+</code></pre>
+
+<p>Look for attempted DLL hijacking conflicts both within and outside of PATH directories.</p>
+<pre><code>CrowdResponse @Mal -a dllinpath,dlloutpath
+
+CrowdResponse @Mal -s
+</code></pre>
+
+<hr />
+<p><a name="Prefetch"></a></p>
+<h1>@Prefetch</h1>
+<h2>Windows Prefetch file processing</h2>
+<h3>Overview</h3>
+<ul>
+<li>extracts information from .pf files</li>
+<li>extracts information from Layout.ini files</li>
+<li>optional recursive directory walk (-s)</li>
+<li>optional specified directory. Defaults to &quot;%Systemroot%\Prefetch&quot;.</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Prefetch [-estvx] [&lt;dir&gt;]
+
+ -e            - Force treating pf files as if from Windows 8 onwards
+ -s            - Recursive listing
+ -t            - Translate \dev\harddiskvolume paths to logical drive path
+ -v            - Force treating pf files as if from Windows Vista/7
+ -x            - Force treating pf files as if from Wiindows XP/2003
+ &lt;dir&gt;         - Directory to start in. Default &quot;%systemroot%\Prefetch&quot;
+
+Environment and app variables are automatically expanded in &lt;dir&gt;.
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Extract Prefetch file information</p>
+<pre><code>CrowdResponse @prefetch
+</code></pre>
+
+<hr />
+<p><a name="PSList"></a></p>
+<h1>@PSList</h1>
+<h2>Process list</h2>
+<h3>Overview</h3>
+<ul>
+<li>process ID</li>
+<li>parent process ID</li>
+<li>process priority</li>
+<li>session ID</li>
+<li>owner SID</li>
+<li>owner name</li>
+<li>owner domain</li>
+<li>full path of process file name</li>
+<li>file size</li>
+<li>full version resource information</li>
+<li>file create, access and modify timestamps</li>
+<li>optional verify digital certificates (-c)</li>
+<li>optional include all modules loaded by each process (-m)</li>
+<li>optional check for process thread injection (-t)</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @PSList [-deinosvx] [-f &lt;ops&gt;] [-z &lt;size&gt;]
+
+ -d            - Obtain process command line
+ -e            - Obtain PE file information for each process executable
+ -i            - Check for process thread injection
+ -n            - For -e, don't dump function names for imports and exports
+ -o            - Enumerate loaded modules for each process
+ -s            - For -e, use nested format resource information
+ -t &lt;fileops&gt;  - Comma separated file operations
+ -v            - Determine and process svchost DLLs. Must be used with -d
+ -x            - For -e, don't dump full resource information
+ -z &lt;size&gt;     - Don't hash files greater than this size in megabytes
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes
+
+Note that option -v to determine svchost DLLs used by the process is
+redundant if option -o (enumerate loaded modules) is also used.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show all processes</p>
+<pre><code>CrowdResponse @pslist
+</code></pre>
+
+<hr />
+<p><a name="PSStrings"></a></p>
+<h1>@PSStrings</h1>
+<h2>Extraction of strings from the memory of running processes</h2>
+<h3>Overview</h3>
+<ul>
+<li>extract ASCII strings from process memory</li>
+<li>extract Unicode (double-byte) strings from process memory</li>
+<li>options to specify minimum and maximum strings lengths</li>
+<li>options to specify character sets to use</li>
+<li>ability to ignore strings containing certain characters</li>
+<li>optional ability to show memory offsets at which strings are found</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @PSStrings [-auv] [-cknrx &lt;n&gt;] [-p &lt;id&gt;] [-P &lt;regex&gt; [-m &lt;text&gt;] [-i &lt;regex&gt;]
+
+ -a            - Only extract ASCII strings
+ -c &lt;n&gt;        - Use built-in character set number
+ -C &lt;text&gt;     - Custom character set
+ -g &lt;regex&gt;    - Only include strings matching regex
+ -k &lt;n&gt;        - XOR every byte read from the file with &lt;n&gt;
+ -l            - Only record string if Luhn check succeeds
+ -n &lt;n&gt;        - Minimum length of a string (default 4)
+ -p &lt;id&gt;       - Process id to examine. Default is all processes
+ -P &lt;name&gt;     - Process name to examine. Name is a regex on full file path
+ -r &lt;n&gt;        - Ignore strings with 'n' or more repeated characters
+ -u            - Only extract Unicode strings
+ -v            - Show extra details (hex memory offset)
+ -x &lt;n&gt;        - Maximum length of a string (default 1024, max 1024)
+
+Character set numbers for -c:
+
+     1           Upper case
+     2           Lower case
+     3           Upper case plus space
+     4           Lower case plus space
+     5           Upper case plus digits
+     6           Lower case plus digits
+     7           Upper case plus digits plus space
+     8           Lower case plus digits plus space
+     9           Digits
+     10          Upper and lower case
+     11          Upper and lower case plus space
+     12          Upper and lower case plus digits plus space
+     13          Upper and lower case plus digits plus punctuation plus space
+
+* Default charset in absence of -c is all printable ASCII characters.
+* A 'Unicode' character is simply 1 character byte followed by a zero byte.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show all strings from process Id 123</p>
+<pre><code>CrowdResponse @psstrings -p 123
+</code></pre>
+
+<hr />
+<p><a name="RegDump"></a></p>
+<h1>@RegDump</h1>
+<h2>Registry dump</h2>
+<h3>Overview</h3>
+<ul>
+<li>all common registry hives supported (can specify short-hand versions e.g. &quot;hklm&quot;, &quot;hkcu&quot; etc)</li>
+<li>pseudo hive name &quot;HKEY_ALL_USERS&quot; or &quot;HKAU&quot; to enumerate all entries under HKEY_USERS</li>
+<li>all value types supported</li>
+<li>optional path recursion</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @RegDump [-dstT] [-r &lt;remote&gt;] &lt;reg key&gt;
+
+ -d            - Nested output format
+ -r &lt;remote&gt;   - Connect to remote registry at [remote]
+ -s            - Recursive dump
+ -T            - Output additional wide character text version of binary data
+ -t            - Output additional ASCII text version of binary data
+ &lt;reg key&gt;     - Registry key to start dump from
+
+Valid Registry hive names are:
+
+  HKEY_LOCAL_MACHINE | HKLM
+  HKEY_CURRENT_USER | HKCU
+  HKEY_CLASSES_ROOT | HKCR
+  HKEY_USERS | HKU
+  HKEY_ALL_USERS | HKAU (pseudo key representing all users)
+
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Dump the &quot;run&quot; key of the registry</p>
+<pre><code>CrowdResponse @regdump &quot;hklm\software\microsoft\windows\currentversion\run&quot;
+</code></pre>
+
+<p>Dump the Windows TCP services registry branch recursively</p>
+<pre><code>CrowdResponse @regdump &quot;hklm\SYSTEM\CurrentControlSet\services\Tcpip&quot; -s
+</code></pre>
+
+<hr />
+<p><a name="RegFile"></a></p>
+<h1>@RegFile</h1>
+<h2>Finds references to files in registry strings</h2>
+<h3>Overview</h3>
+<ul>
+<li>all registry hives supported (can specify short-hand versions e.g. &quot;hklm&quot;, &quot;hkcu&quot; etc)</li>
+<li>pseudo hive name &quot;HKEY_ALL_USERS&quot; or &quot;HKAU&quot; to enumerate all entries under HKEY_USERS</li>
+<li>REG_SZ and REG_MULTI_SZ strings are supported</li>
+<li>optional path recursion</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @RegFile [-s] [-f &lt;ops&gt;] [-z &lt;size&gt;] &lt;reg key&gt;
+
+ -s            - Recursive dump
+ -t &lt;fileops&gt;  - Comma separated file operations
+ -z &lt;size&gt;     - Don't hash files greater than this size in megabytes
+ &lt;reg key&gt;     - Registry key to start dump from
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes|exists|rundll
+
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Examine one of the &quot;run&quot; keys of the registry</p>
+<pre><code>CrowdResponse @regfile &quot;hklm\software\microsoft\windows\currentversion\run&quot;
+</code></pre>
+
+<p>@RegFile differs from @RegDump in that it only searches for registry string types of REG_SZ and REG_EXPAND_SZ and it attempts to determine if those strings refer to a file path. If the path refers to an existing file on disk, details of that file are output. If the file path does not exist, the potential file path is still output but obviously no details will be available.</p>
+<p>This tool is useful for registry locations that typically refer to files, such as autoruns locations, and can detect if the file that was referred to no longer exists such as in the case where the file was deleted but the reference to it in the registry was not removed.</p>
+<hr />
+<p><a name="Sensor"></a></p>
+<h1>@Sensor</h1>
+<h2>CrowdStrike Falcon Host sensor information</h2>
+<h3>Overview</h3>
+<ul>
+<li>general sensor registry information</li>
+<li>CSAgentService registry information</li>
+<li>CSImService registry information</li>
+<li>csagent service information</li>
+<li>im service information</li>
+<li>count of installs</li>
+<li>count of uninstalls</li>
+<li>details on Falcon Host files</li>
+<li>general network information from the host</li>
+<li>DNS lookup debugging information</li>
+<li>ability to clean up orphaned registry data and files</li>
+</ul>
+<p>This module would typically be used on its own as an information gathering and debugging tool for systems hosting the <em>CrowdStrike Falcon Host</em> sensor software.</p>
+<h3>Usage</h3>
+<pre><code> @Sensor [-cs]
+
+ -c            - Remove traces of previous installs
+ -s            - Dumps contents of Situational Model
+</code></pre>
+
+<h3>Examples</h3>
+<p>Output CrowdStrike Falcon Host sensor information</p>
+<pre><code>CrowdResponse -v -e -o out.xml @sensor
+</code></pre>
+
+<hr />
+<p><a name="Shim"></a></p>
+<h1>@Shim</h1>
+<h2>Application Compatibility (Shim) Cache registry entry parser</h2>
+<h3>Overview</h3>
+<ul>
+<li>supports XP, Vista, Win 7, 2003, 2008, 2008 R2, 32 and 64 bit</li>
+<li>depending on OS, it reveals file path, last modified time, last update time, file size and process exec flag</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Shim [-f &lt;ops&gt;] [-z &lt;size&gt;]
+
+ -t &lt;fileops&gt;  - Comma separated file operations
+ -z &lt;size&gt;     - Don't hash files greater than this size in megabytes
+
+Available ops: cam,properties,certs,md5,sha1,sha256,xoffline,xreparse,xsparse
+Always on    : name,size,attributes
+</code></pre>
+
+<h3>Examples</h3>
+<p>Dump current system's Shim Cache from the registry</p>
+<pre><code>CrowdResponse @Shim
+</code></pre>
+
+<hr />
+<p><a name="SuperFetch"></a></p>
+<h1>@SuperFetch</h1>
+<h2>Decodes and displays information from the AgAppLaunch SuperFetch database file</h2>
+<h3>Overview</h3>
+<ul>
+<li>decodes and displays data from the AgAppLaunch Superfetch database</li>
+<li>option to provide AgAppLaunch.db from a different OS</li>
+<li>options to specify if provided files are from 32 or 64 bit OS</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @SuperFetch [-36s] [&lt;dir&gt;]
+
+ -3            - Treat files in &lt;dir&gt; as if they came from a 32 bit OS
+ -6            - Treat files in &lt;dir&gt; as if they came from a 64 bit OS
+ -s            - Recursive processing of &lt;dir&gt;
+ -t            - Translate \dev\harddiskvolume paths to logical drive path
+ &lt;dir&gt;         - Optional directory of Superfetch db files to process
+
+Environment and app variables are automatically expanded in &lt;dir&gt;.
+Be sure to enclose paths that contain spaces within double quotes.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show SuperFetch information</p>
+<pre><code>CrowdResponse @SuperFetch
+</code></pre>
+
+<hr />
+<p><a name="System"></a></p>
+<h1>@System</h1>
+<h2>Shows system information</h2>
+<h3>Overview</h3>
+<ul>
+<li>current date/time in UTC and local zones</li>
+<li>timezone</li>
+<li>IPv4 network address</li>
+<li>IPv4 interface MAC address</li>
+<li>IPv6 network address</li>
+<li>IPv6 interface MAC address</li>
+<li>NetBIOS computer name</li>
+<li>DNS name</li>
+<li>Operating system and service pack level</li>
+<li>OS install date</li>
+<li>WOW64 information</li>
+<li>Administrator status</li>
+<li>Application version</li>
+</ul>
+<p>This is basically a no-op in that it does not add any output of its own but allows for the application to simply emit the already present <code>&lt;system&gt;...&lt;/system&gt;</code> information without having to invoke any other module. This can be useful as a basic inventory.</p>
+<h3>Usage</h3>
+<pre><code> @System
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show system information</p>
+<pre><code>CrowdResponse @system
+</code></pre>
+
+<hr />
+<p><a name="Tasks"></a></p>
+<h1>@Tasks</h1>
+<h2>Windows Scheduled tasks information</h2>
+<h3>Overview</h3>
+<ul>
+<li>shows all Windows scheduled tasks</li>
+<li>task name</li>
+<li>application</li>
+<li>application parameters</li>
+<li>application working directory</li>
+</ul>
+<p>This module process data using both the Task Scheduler 1.0 interface and also the newer (Vista onward) Task Scheduler 1.2 (&quot;2.0&quot;) interface. The 2.0 output is significantly more detailed.</p>
+<h3>Usage</h3>
+<pre><code> @Tasks
+</code></pre>
+
+<h3>Examples</h3>
+<p>Show all active scheduled tasks</p>
+<pre><code>CrowdResponse @Tasks
+</code></pre>
+
+<hr />
+<p><a name="YARA"></a></p>
+<h1>@YARA</h1>
+<h2>YARA rules processing</h2>
+<h3>Overview</h3>
+<ul>
+<li>scan all active processes' memory</li>
+<li>scan all active processes' executables</li>
+<li>scan associated modules of active processes</li>
+<li>supply YARA rule file directory with optional recursion, file masks and file filters</li>
+<li>embed YARA rules directly within the config file</li>
+<li>scan target path with optional recursion, depth and path and file filters</li>
+<li>scan a single process ID</li>
+<li>download and run a YARA rule file from a given URL</li>
+</ul>
+<h3>Usage</h3>
+<pre><code> @Yara -y &lt;dir&gt; | -u &lt;url&gt; [-abchorsv] [-defimnptxy# &lt;val&gt;]
+
+ -# &lt;section&gt;  - Use built-in config YARA section (0 indexed). Default all
+ -a            - Scan active processes memory
+ -b            - Scan active processes executable files
+ -c            - Strict SSL cert adherence for -u. Default is ignore bad certs
+ -d &lt;depth&gt;    - Target path recursion depth
+                 (0 = top level only, 1 = 1 level down etc)
+ -e &lt;filter&gt;   - Target file path exclusion regex filter pattern
+ -f &lt;mask&gt;     - Target file name mask. Default is &quot;*.*&quot;
+ -h            - Only show positive hits
+ -i &lt;filter&gt;   - Target file path inclusion regex filter pattern
+ -m &lt;mask&gt;     - YARA rule file name mask. Default is &quot;*.yar&quot;
+ -n &lt;filter&gt;   - YARA rule file path inclusion regex filter pattern
+ -o            - Scan all loaded module files of active processes
+ -p &lt;pid&gt;      - Single process ID to scan
+ -r            - Recurse into YARA rules directory
+ -s            - Recurse into target directories
+ -t &lt;dir&gt;      - Starting target files directory
+ -u &lt;url&gt;      - Download and run YARA file from URL
+ -v            - Enable additional informational output
+ -x &lt;filter&gt;   - YARA rule file path exclusion regex filter pattern
+ -y &lt;dir&gt;      - YARA rules directory
+
+Environment variables are automatically expanded in &lt;dir&gt; and &lt;filter&gt;.
+Be sure to enclose paths that contain spaces within double quotes.
+
+If -m is used to specify a YARA file mask and no YARA directory (-y) is
+specified, the current directory '.' will be used.
+
+When -u is used to download a YARA rule file it is placed in a temporary
+directory unless -y has been used to specify a YARA rules directory, in
+which case it is saved there. In both cases the downloaded file is the only
+one executed i.e. other files that may be in the YARA directory specified
+by -y are ignored. It is saved as a unique randomly generated name and deleted
+upon scanning completion.
+</code></pre>
+
+<h3>Examples</h3>
+<p>Apply YARA rules in directory &quot;yarafiles&quot; to currently active processes and their binaries.</p>
+<pre><code>CrowdResponse @yara -y yarafiles -a -b
+</code></pre>
+
+<h3>Embedding YARA rules in the configuration file</h3>
+<p>The application can use a configuration file as its input instead of specifying items the command line. See @main option -i here. It is possible to embed YARA rules within this file. To do this you need to enclose the rules within the following construct.</p>
+<pre><code>[&lt;SECTION:YARA&gt;]
+// YARA rules go here
+[&lt;/SECTION&gt;]
+</code></pre>
+
+<p>Here is an example config file with an embedded YARA rule set.</p>
+<pre><code>// @pslist example
+@pslist -c -h -j -m -d -t -e -r
+
+// @dirlist example
+@dirlist &quot;%ProgramFiles%&quot; -c -h -m -r -s -t -z 100 -i &quot;\.(exe|dll)$&quot;
+
+// @YARA example
+// Use built-in (to this config) rules shown below against running process binaries (-b) and memory (-a)
+
+@yara -a -b -v
+
+[&lt;SECTION:YARA&gt;]
+
+rule crowdstrike : crowdstriketest
+{
+  meta:
+    description = &quot;This is just an example&quot;
+
+  strings: 
+    $a = &quot;Falcon&quot;
+
+  condition:
+    $a
+}
+
+[&lt;/SECTION&gt;]
+</code></pre>
+
+<p>Multiple sections can be used. By default the @yara module will use all YARA sections in the configuration file. However, by using the @yara option <strong>-#</strong> you can specify a particular section, where the first YARA section is numbered 0, the second 1 and so on.</p>
+<hr />
+<p><a name="MainOptions"></a></p>
+<h1>Main Application Options</h1>
+<p>In addition to the many sub-tools that CrowdResponse offers, the main application itself can be provided with several options to control its operation.</p>
+<blockquote>
+<p>NOTE that these primary application options have to be specified FIRST on the command line i.e. before any references to any @tools.</p>
+</blockquote>
+<h2>Use low CPU priority to lessen load on the system</h2>
+<h3>Option: -c</h3>
+<p>While the application will not overly adversely affect system performance when running, if frequent intensive scanning of a host is to be performed it may be beneficial to use this option to lower the priority of the process to lessen the impact of the scanning during the execution of this application.</p>
+<p>It sets the process priority class to idle during processing and restores it to normal once the scan has completed.</p>
+<p>Note that CPU activity of the process may still potentially be seen to be high on occasion but as soon as any normal level process wants control it will cause this application to back out and let the normal level process take priority.</p>
+<pre><code>CrowdResponse -i config.txt -o out.xml -c
+</code></pre>
+
+<h2>Output application information to the registry</h2>
+<h3>Option: -d</h3>
+<p>In some cases it may be useful as a debugging aid to know if and when the application was run, along with other useful debugging information. This option provides that ability.</p>
+<p>The registry locations of the values are found in the registry at</p>
+<pre><code>HKEY_LOCAL_MACHINE\SOFTWARE\CrowdStrike\CrowdResponse
+</code></pre>
+
+<ul>
+<li>
+<strong>Duration</strong> (<em>REG_SZ</em>)
+<ul>
+<li>How long the application ran for in <em>hh:mm:ss</em> format.</li>
+</ul>
+</li>
+<li>
+<strong>Start</strong> (<em>REG_SZ</em>)
+<ul>
+<li>When the application started (UTC).</li>
+</ul>
+</li>
+<li>
+<strong>Stop</strong> (<em>REG_SZ</em>)
+<ul>
+<li>When the application stopped (UTC).</li>
+</ul>
+</li>
+<li>
+<strong>UploadStatus</strong> (<em>REG_DWORD</em>)
+<ul>
+<li>HTTP response code</li>
+</ul>
+</li>
+</ul>
+<p>Example</p>
+<pre><code>CrowdResponse -v -d -i config.txt -o out.xml
+</code></pre>
+
+<h2>Indent output XML for readability</h2>
+<h3>Option: -e</h3>
+<p>This controls whether the output XML is indented for easier human readability. Specifying this option turns on nested indentation of XML elements. By default this is off in order to reduce the size of the output.</p>
+<pre><code>CrowdResponse -v -e -i config.txt -o out.xml
+</code></pre>
+
+<h2>Validate configuration file and exit</h2>
+<h3>Option: -g</h3>
+<p>This option is used to validate and report on certain issues that can occur in a configuration file that can result in problematic XML output. e.g. incorrect text encoding (Unicode characters present), misplaced double quotes etc. It assumes option -i (read from configuration file) is also being used.</p>
+<p>If this option is supplied the application will check for issues and exit immediately. No further actions will take place.</p>
+<pre><code>CrowdResponse -g -i config.txt
+</code></pre>
+
+<h2>Read config from file or URL</h2>
+<h3>Option: -i</h3>
+<p>Input to the tool can also be provided from a file or download from a URL. The file contents is treated like one large command line but there is no realistic limit to the size. Individual sub-tool commands can be placed on separate lines -- the tool will happily ignore all white space. You can also use C++ style comments (&quot;//&quot;) in the file. Any line <strong>starting</strong> with &quot;<em>//</em>&quot; will treat the remainder of the line as a comment.</p>
+<p>The input file path can utilize regular system environment variables and in addition a number of application-specific pseudo environment variables can be used (see -o below) although in this context only the <strong>%ad%</strong> application directory variable makes sense. This latter case can be useful when running the tool as another user (<em>RunAs</em>) when the <em>current directory</em> often ends up being something like &quot;<em>C:\Windows\System32</em>&quot; thus preventing you from locating files that were not referenced by their full path.</p>
+<pre><code>CrowdResponse -i config.txt
+</code></pre>
+
+<p>where config.txt may contain for example:</p>
+<pre><code>// my config file version 1.0
+@dirlist &quot;C:\&quot;
+@dirlist &quot;C:\Windows&quot;
+@PSList
+@Yara -a -b -y MyYaraRules
+</code></pre>
+
+<blockquote>
+<p>Note that the order of modules specified in a configuration file (or on the command line for that matter) is not tied to the order that the application executes those modules. The run time order is determined internally by the application according to built-in rules.</p>
+</blockquote>
+<h2>Keep the output XML/CAB file when -x is used</h2>
+<h3>Option: -k</h3>
+<p>The tool has an option -x for self-destruct (see below). The normal operation of this is once execution is complete, the EXE is deleted along with any output file that was created. If you use this option -k the output file will not be deleted.</p>
+<pre><code>CrowdResponse -x -k -i config.txt -o out.xml
+</code></pre>
+
+<h2>Maximum application run time</h2>
+<h3>Option: -m</h3>
+<p>This option controls how long the application runs for before exiting. Without this option it will run until completion. Specifying this option will cause the application to test how long it has been running for at the completion of each module run. It the duration has exceeded the specified time it will gracefully exit (uploading the output file as usual if specified).</p>
+<blockquote>
+<p>Because the duration is only checked after completing each module run, it is possible than a long running module could exceed the time provided.</p>
+</blockquote>
+<p>Exit the application after 2 hours and 30 minutes.</p>
+<pre><code>CrowdResponse -v -e -m 02:30:00 -i config.txt -o out.xml
+</code></pre>
+
+<h2>Save output to file</h2>
+<h3>Option: -o</h3>
+<p>XML output from the tool can be sent to a specified file. e.g.</p>
+<pre><code>CrowdResponse -o output.xml @dirlist &quot;%windir%&quot; -s -f *.exe
+</code></pre>
+
+<p>The output file name can use regular operating system environment variables. e.g.</p>
+<pre><code>CrowdResponse -o &quot;%temp%\output.xml&quot; @dirlist &quot;%windir%&quot; -s -f *.exe
+</code></pre>
+
+<p>There are also custom pseudo environment variables that can be used to create system unique output file names. They are as follows.</p>
+<pre><code>  %ad%The application's directory path (includes trailing back-slash)
+  %ip%Primary IPv4 IP address
+  %nm%NetBIOS computer name
+  %dm%       Windows domain name
+  %tm%Current UTC date/time
+  %ve%Application product version
+</code></pre>
+
+<p>Here's an example of their usage and subsequent formed file name.</p>
+<pre><code>CrowdResponse -o &quot;Results-%cu%,%ag%,%ip%,%nm%.xml&quot; @network
+</code></pre>
+
+<p>Resultant file name:</p>
+<pre><code>Results-8396c034dd9647abba25c8d4c671d52f,6a2fc2704c80461d9cd52f29611e9984,10.1.2.3,MYPC.xml
+</code></pre>
+
+<p>If the system that the command is run on does not have a Falcon Host sensor on it there won't be any Ids and thus the name may be formed as such.</p>
+<pre><code>Results-NoCSID,NoAGID,10.1.2.3,MYPC.xml
+</code></pre>
+
+<h2>Check free disk space</h2>
+<h3>Option: -q</h3>
+<p>If there is insufficient free disk space on the output volume prior to starting the application will exit.</p>
+<p>The amount of space desired is specified in megabytes.</p>
+<pre><code>CrowdResponse -q 5000 -i config.txt -o out.xml
+</code></pre>
+
+<h2>Upload results to server</h2>
+<h3>Option: -u</h3>
+<p>The tool can be told to upload the results contained in the output from the -o option to a remote web server using HTTP or HTTPS protocols.</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;http://www.example.com/upload/&quot; @dirlist &quot;%windir%&quot; -f *.exe -s
+CrowdResponse -o out.xml -u &quot;\\server\path\&quot; @dirlist &quot;%temp%&quot; -f *.exe -s
+</code></pre>
+
+<h3>If the target is a URL...</h3>
+<p>The file is transmitted using an HTTP POST method using a multipart form scheme.</p>
+<h3>Option: -n</h3>
+<p>The form item name can be specified using the -n option.</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;http://www.example.com/upload/&quot; -n userfile -i config.txt
+</code></pre>
+
+<h3>Option: -f</h3>
+<p>The form item value name can be specified using the <em>-f</em> option. This is the name of the file as seen by the remote server.</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;http://www.example.com/upload/&quot; -f filename -i config.txt
+</code></pre>
+
+<h3>Option: -s</h3>
+<p>You can rate limit all HTTP uploads using this option.</p>
+<p>There are currently 2 ways to achieve this.</p>
+<ol>
+<li>By supplying a rate value directly.</li>
+<li>By supplying a time, specified as an absolute local 24 hour time value, by which the upload must be completed.</li>
+</ol>
+<p>The direct value is in K bytes per second. e.g. 25 KB/s</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;http://www.example.com/upload/&quot; -i config.txt -s 25
+</code></pre>
+
+<p>The time value is specified as a local <em>hh/mm/ss</em> time value such as &quot;<em>17:30:00</em>&quot;. e.g.</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;http://www.example.com/upload/&quot; -i config.txt -s &quot;17:30:00&quot;
+</code></pre>
+
+<p>If the rate calculated by specifying an end time is less than 256 bytes per second, the rate will be 256 bytes per second. The same also applies when the specified time has already passed at the point at which the upload begins.</p>
+<h3>Option: -t</h3>
+<p>Strict SSL adherence can be specified using the -t option. By default CrowdResponse will ignore certificate errors such as those produced by the use of self-signed certificates.</p>
+<pre><code>CrowdResponse -o out.xml -u &quot;https://www.secureexample.com/upload/&quot; -t -i config.txt
+</code></pre>
+
+<h3>Programmatic example</h3>
+<p>In this example of an HTTP POST, -n would correspond to &quot;userfile&quot; and -f by &quot;filename&quot;.</p>
+<pre><code>POST /upload HTTP/1.0
+Host: www.example.com
+Content-type: multipart/form-data, boundary=AaB03x
+Content-Length: [length];
+
+--AaB03x
+content-disposition: form-data; name=&quot;userfile&quot;; filename=&quot;filename&quot;
+Content-Type: [mimetype]
+Content-Transfer-Encoding: binary
+
+[binary data]
+--AaB03x--
+</code></pre>
+
+<p>If -n is not specified, &quot;<em>filename</em>&quot; is used.</p>
+<p>If -f is not specified, the file name component of the path specified with -s is used.</p>
+<h3>If the target is a directory path...</h3>
+<p>The file is simply copied to the remote path specified. This could be a file share for example. If the target file already exists it is overwritten.</p>
+<blockquote>
+<p>Note that the path should specify a <strong>directory</strong> i.e. should normally end with a '\' character.</p>
+</blockquote>
+<h2>Verbose mode</h2>
+<h3>Option: -v</h3>
+<p>Additional information that can be useful to gauge the operational state of the application can be displayed by enabling this option.</p>
+<pre><code>CrowdResponse -v -i config.txt
+</code></pre>
+
+<h2>Self destruct on exit</h2>
+<h3>Option: -x</h3>
+<p>The tool can be told to self destruct, leaving no trace of itself. e.g.</p>
+<pre><code>CrowdResponse -x @dirlist &quot;%windir&quot; -f *.exe -s
+</code></pre>
+
+<p>This also deletes the output file (<em>-o</em>) and the configuration file (<em>-i</em>) if any. This is intended to be used with -u when uploading to a server and takes place after the upload completes.</p>
+<p>An exception to this is that if the output file (<em>-o</em>) is seen to reside on a remote network share it is <strong>NOT</strong> deleted. However, using -x twice or more (i.e. -x -x) can override this and will delete the file regardless.</p>
+<h2>Compress output to CAB archive</h2>
+<h3>Option: -z</h3>
+<p>Tells the tool to compress the resultant XML file into a CAB archive. The original XML file is deleted after successful compression. The CAB file will be of the same name as specified with -o but with a .cab extension.</p>
+<p>If the <em>-u</em> (upload to server) option is used, the CAB file is uploaded instead.</p>
+<p>If the <em>-x</em> (self destruct) option is used, the CAB file is deleted.</p>
+<h2>Multiple tools launched together</h2>
+<p>Just as you can specify multiple tools in a configuration file using <em>-i</em>, multiple sub-tools can be run in one invocation directly from the command line and the same tool can also be specified more than once. This is useful for things like directory listings where you want to specify different directories with different parameters. e.g.</p>
+<p>List two directories</p>
+<pre><code>CrowdResponse @dirlist &quot;C:\&quot; @dirlist &quot;C:\Windows&quot;
+</code></pre>
+
+<p>Do a directory listing of all files in a given directory and list all running processes</p>
+<pre><code>CrowdResponse @dirlist C:\temp @pslist
+</code></pre>
+
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->

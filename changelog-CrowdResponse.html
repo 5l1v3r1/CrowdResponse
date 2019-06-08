@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>changelog-free</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+/*  GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+
+/* RESET
+=============================================================================*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* BODY
+=============================================================================*/
+
+body {
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+body>*:first-child {
+  margin-top: 0 !important;
+}
+
+body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* BLOCKS
+=============================================================================*/
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+/* HEADERS
+=============================================================================*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 tt, h1 code, h2 tt, h2 code, h3 tt, h3 code, h4 tt, h4 code, h5 tt, h5 code, h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: #000;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  color: #000;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777;
+  font-size: 14px;
+}
+
+body>h2:first-child, body>h1:first-child, body>h1:first-child+h2, body>h3:first-child, body>h4:first-child, body>h5:first-child, body>h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+  margin-top: 10px;
+}
+
+/* LINKS
+=============================================================================*/
+
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* LISTS
+=============================================================================*/
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul li > :first-child, 
+ol li > :first-child, 
+ul li ul:first-of-type, 
+ol li ol:first-of-type, 
+ul li ol:first-of-type, 
+ol li ul:first-of-type {
+  margin-top: 0px;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt>:first-child {
+  margin-top: 0px;
+}
+
+dl dt>:last-child {
+  margin-bottom: 0px;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd>:first-child {
+  margin-top: 0px;
+}
+
+dl dd>:last-child {
+  margin-bottom: 0px;
+}
+
+/* CODE
+=============================================================================*/
+
+pre, code, tt {
+  font-size: 12px;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+}
+
+code, tt {
+  margin: 0 0px;
+  padding: 0px 0px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre>code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+kbd {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #DDDDDD;
+    background-image: linear-gradient(#F1F1F1, #DDDDDD);
+    background-repeat: repeat-x;
+    border-color: #DDDDDD #CCCCCC #CCCCCC #DDDDDD;
+    border-image: none;
+    border-radius: 2px 2px 2px 2px;
+    border-style: solid;
+    border-width: 1px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 10px;
+    padding: 1px 4px;
+}
+
+/* QUOTES
+=============================================================================*/
+
+blockquote {
+  border-left: 4px solid #DDD;
+  padding: 0 15px;
+  color: #777;
+}
+
+blockquote>:first-child {
+  margin-top: 0px;
+}
+
+blockquote>:last-child {
+  margin-bottom: 0px;
+}
+
+/* HORIZONTAL RULES
+=============================================================================*/
+
+hr {
+  clear: both;
+  margin: 15px 0;
+  height: 0px;
+  overflow: hidden;
+  border: none;
+  background: transparent;
+  border-bottom: 4px solid #ddd;
+  padding: 0;
+}
+
+/* TABLES
+=============================================================================*/
+
+table th {
+  font-weight: bold;
+}
+
+table th, table td {
+  border: 1px solid #ccc;
+  padding: 6px 13px;
+}
+
+table tr {
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+/* IMAGES
+=============================================================================*/
+
+img {
+  max-width: 100%
+}
+</style>
+</head>
+<body>
+<hr />
+<h3>CrowdResponse - 1.0.6.0</h3>
+<p><strong>4/7/2016</strong></p>
+<ul>
+<li>
+Added - new module @tasks
+<ul>
+<li>
+We now have tasksv1 and tasksv2 output.
+<ul>
+<li>tasksv1 uses the original Task Scheduler 1.0 API.</li>
+<li>tasksv2 uses the newer (Vista+) Task Scheduler 1.2 (&quot;2.0&quot;) API.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Added - new module @jobs to enumerate 'at' jobs.</li>
+<li>
+Added - introduction of the concept of <strong>fileops</strong> for module file operations.
+<ul>
+<li>Many modules had several options to control various operations on discovered files such as reporting file version, certificate validation, hashes etc. These were all separate command line options. We have now replaced these disparate options with a single option (typically <strong>-t</strong>) followed by a string that can provide all of the previous options in one place. See the <em>readme</em> file for full details.</li>
+<li>This obviously requires that previous configuration files be updated to support the new format.</li>
+</ul>
+</li>
+<li>
+Added - new application variable <strong>%hdnext%</strong>.
+<ul>
+<li>This corresponds to the next physical hard drive (i.e. not network or removable drives) after %systemdrive%.</li>
+<li>If there is no next drive it will translate to &quot;?:&quot;</li>
+<li>For example <em>&quot;%hdnext%\MyFiles&quot;</em> could translate to <em>&quot;D:\MyFiles&quot;</em></li>
+<li>In addition to the places where the other pseudo environment variables are used, this new one can also  be used in <strong>@dirlist</strong> and <strong>@mft</strong>.</li>
+</ul>
+</li>
+<li>
+Added - new application variable <strong>%hdprev%</strong>.
+<ul>
+<li>Similar to <strong>%hdnext%</strong> above, this variable translates to the hard drive prior to %systemdrive%.</li>
+</ul>
+</li>
+<li>Added - new application variable <strong>%dm%</strong> that resolves to the Windows domain name.</li>
+<li>Added - Windows domain name to <strong>&lt;system&gt;</strong> output section, &quot;<strong><em>domain</em></strong>&quot;.</li>
+<li>Added - <strong>index</strong> Id value to entries in <strong>@shim</strong>.</li>
+<li>Added - module run duration to XML <strong>log</strong>.</li>
+<li>Added - new <strong>@psstrings</strong> option <strong>-C</strong> (note <em>capital</em> C) to specify a custom character set.</li>
+<li>Added - option <strong>-l</strong> (el) to <strong>@psstrings</strong> for credit card Luhn check validation.</li>
+<li>Added - module execution order list to <em>readme</em> file.</li>
+<li>Added - application start time, end time, duration and last HTTP upload status code to the XML <strong>log</strong> section regardless of <strong>@main</strong> option <strong>-d</strong> (<em>Log basic application information to the registry</em>).</li>
+<li>Added - <strong>DisplaySwitch</strong> application to <strong>@mal -s</strong> detection.</li>
+<li>
+Added - ability to enumerate processes by name in <strong>@psstrings</strong>.
+<ul>
+<li>This is achieved through the use of new option <strong>-P &lt;name&gt;</strong> where <em>name</em> is a regular expression applied to the full process file path.</li>
+</ul>
+</li>
+<li>Added - <em>WinHttpAutoProxySvc</em> service dump to <strong>@sensor</strong>.</li>
+<li>Added - Schannel Protocols registry dump output to <strong>@sensor</strong>.</li>
+<li>
+Added - alternate CS Agent registry information location output to <strong>@sensor</strong>.
+<ul>
+<li>This did not affect operation of the application. It was just potentially confusing for the user.</li>
+</ul>
+</li>
+<li>
+Added - <strong>@main</strong> option <strong>-q</strong> to test for free disk space.
+<ul>
+<li>If there is insufficient free disk space on the output volume prior to starting the application will exit.</li>
+</ul>
+</li>
+<li>Added - new <strong>log</strong> XML section to record warnings and errors encountered during the running of the application.</li>
+<li>Added - process priority value and priority string to <strong>@pslist</strong>.</li>
+<li>Added - session id value to <strong>@pslist</strong>.</li>
+<li>Added parent PID value to <strong>@pslist</strong>.</li>
+<li>Added - @main option <strong>-g</strong> to validate and report on certain issues that can occur in a configuration file that can result in problematic XML output. e.g. incorrect text encoding (Unicode characters present), misplaced double quotes etc.</li>
+<li>Added - option <strong>-r</strong> to <strong>@regdump</strong> to enable connection to remote registries.</li>
+<li>Added - Most places where a system environment variable is supported we now also support built-in application environment variables (<em>%hdnext%</em> etc).</li>
+<li>
+Added - new options for <strong>@regdump</strong> to output additional entries corresponding to interpreted binary data in text format.
+<ul>
+<li>
+Option <strong>-t</strong> will output the binary data interpreted as single byte ASCII characters.
+<ul>
+<li>The corresponding pseudo value type in the XML output is <strong><em>binary_textA</em></strong>.</li>
+</ul>
+</li>
+<li>
+Option <strong>-T</strong> will output the binary data interpreted as double byte (wide character) Unicode characters.
+<ul>
+<li>The corresponding pseudo value type in the XML output is <strong><em>binary_textW</em></strong>.</li>
+</ul>
+</li>
+<li>Unprintable characters are shown as a period '.'.</li>
+</ul>
+</li>
+<li>
+Added - new module: <strong>@system</strong>.
+<ul>
+<li>This is basically a no-op in that it does not add any output of its own but allows for the application to simply emit the already present <code>&lt;system&gt;...&lt;/system&gt;</code> information without having to invoke any other module. This can be useful as a basic inventory.</li>
+</ul>
+</li>
+<li>Added - new @main option <em>-s</em> to rate limit HTTP uploads.</li>
+<li>
+Added - <strong>@main</strong> option <strong>-u</strong> now supports file directories as the destination for &quot;upload&quot;.
+<ul>
+<li>This is useful in situations where the final output destination path is on a file share but we don't want to incur all of the overhead of incrementally writing to the file share and compressing the file on the share during the running of the application.</li>
+</ul>
+</li>
+<li>
+Added - <strong>@main</strong> option <strong>-Y</strong> for proxy fall-back.
+<ul>
+<li>When uploading the resultant file (-u, to a URL) if proxy upload fails (-y) revert to no proxy and try again.</li>
+</ul>
+</li>
+<li>Fixed - bug passing on command line parameters from main stub application to platform specific version. </li>
+<li>Fixed - improperly formed XML output of base address in <strong>@drivers</strong>.</li>
+<li>Fixed - the application now prevents system dialog boxes from showing when attempting to access devices that have removable media not present.</li>
+<li>Fixed - the embedded 32 bit version of the application was not being digitally signed in the official build process. This has been remedied.</li>
+<li>Fixed - in the <strong>@mal</strong> module in the case where the referenced file for a debugger for the associated accessibility app does not have a full path specified (e.g. Just specifying &quot;<em>cmd.exe</em>&quot;) then we would not be showing the details of the file (hashes, properties etc). It would still show as vulnerable but there would just be no file details. We will now assume that the full path of a file with no drive/directory present refers to the Windows system directory.</li>
+<li>
+Fixed bug in <strong>@mal -s</strong>.
+<ul>
+<li>If the file in question did not exist on disk it would be reported as vulnerable.</li>
+</ul>
+</li>
+<li>Fixed a problem with indentation of XML tags.</li>
+<li>Fixed a bug in <strong>@yara</strong> when using multiple YARA sections in a config file leading to incorrect processing of rules.</li>
+<li>Fixed problem with truncation of regular expressions in <strong>@dirlist</strong> and other places where environment variables are expanded.</li>
+<li>Fixed bug in <strong>@pslist</strong> when using -x option (<em>For -e, don't dump full resource information</em>)</li>
+<li>Fixed issue with catalog based digital signatures on Windows 8 and above.</li>
+<li>Changed - Module <strong>@psstrings</strong> option <strong>-i</strong> (&quot;<em>Only include strings matching regex</em>&quot;) is now option <strong>-g</strong>.</li>
+<li>Removed - the seldom used <strong>@psstrings</strong> option <strong>-m</strong> (&quot;<em>Text containing characters that MUST be present in a string</em>&quot;). This is effectively replaced by option <strong>-C</strong> (see below).</li>
+<li>Improved - detection of binary characters in configuration file.</li>
+<li>Improved - output of offending area of configuration file when errors are detected.</li>
+<li>Improved - URL for <strong>@main -u</strong> (upload to server) now supports the built-in pseudo environment variables (<strong>%cu%</strong>, <strong>%ag%</strong> etc).</li>
+<li>Improved - <strong>@main</strong> option <strong>-d</strong> (<em>Log basic application information to the registry</em>) now also logs the last HTTP file upload server status code to the registry.</li>
+<li>Improved - <strong>@main</strong> option <strong>-g</strong> (<em>Validate config file and exit</em>) now also checks the configuration's parameters syntax.</li>
+<li>Improved - in all cases where a path inclusion/exclusion regex is supplied, the regex will now have all single character back slash characters escaped to become 2 back slashes.</li>
+<li>Improved reporting of improperly constructed configuration file <strong>SECTION</strong> names.</li>
+<li>Improved - reduced superfluous output from <strong>@yara</strong> module when using option -h (<em>Only show positive hits</em>).</li>
+<li>
+Improved <strong>@main</strong> option <strong>-g</strong> (validate config) to detect config file issues at an earlier stage (prior to extracting YARA sections for example).
+<ul>
+<li>If this option is supplied the application will check for issues and exit immediately. No further actions will take place.</li>
+</ul>
+</li>
+<li>
+Updated - new features for <strong>@mal -d</strong> (DLL hijacking).
+<ul>
+<li>
+There are now 3 distinct tests for this option:
+<ol>
+<li>Performs checking of DLL file name conflicts <em>within</em> each directory found in the environment variable <strong>PATH</strong>. i.e looks for the same base DLL file name being present inside 2 or more PATH directories.</li>
+<li>
+Performs checking of DLL file name conflicts for files <strong>not</strong> found in a <strong>PATH</strong> directory against those found in a <strong>PATH</strong> directory.
+<ul>
+<li>Directory values listed at <em>SYSTEM\CurrentControlSet\Control\Session Manager\KnownDLLs</em> (<em>DllDirectory</em> and <em>DllDirectory32</em>) will be ignored.</li>
+</ul>
+</li>
+<li>Examines all <strong>svchost.exe</strong> processes (Windows services) that are running and for each one analyzes the list of modules that the process has loaded. If any module of the same base file name (DLL) is loaded at a different path than another a conflict is reported.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+Updated - The <strong>@dirlist</strong> module will now process actual directory entries.
+<ul>
+<li>The <code>&lt;path&gt;</code> XML element will point to the path of the directory.</li>
+<li>The <code>&lt;name&gt;</code> field will be a blank string.</li>
+<li>The <code>&lt;attr&gt;</code> &quot;<code>str</code>&quot; attribute will contain &quot;<strong><em>DIRECTORY</em></strong>&quot;.</li>
+<li>Note that several file operations are not really applicable to directory entries and will be blank or show an error message.</li>
+</ul>
+</li>
+<li>Updated - <strong>@mal -a sticky</strong> <em>Sticky Keys</em> list of allowed valid certificate signer strings to accommodate values found on Windows Server 2003.</li>
+<li>
+Updated - additional protocols for HTTPS uploads.
+<ul>
+<li>By default only SSL3 and TLS1 were enabled in Windows 7 and Windows 8.</li>
+<li>By default only SSL3, TLS1.0, TLS1.1, and TLS1.2 were enabled in Windows 8.1 and Windows 10.</li>
+<li>SSL3, TLS1.0, TLS1.1, and TLS1.2 are now explicitly enabled on all platforms.</li>
+<li>This would only have an effect if the web server for example <em>only</em> accepted TLS1.2.</li>
+<li>HKLM\SOFTWARE\CrowdStrike\CrowdResponse <strong>UploadStatus</strong> (DWORD)</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.5.43</h3>
+<p><strong>10/2/2015</strong></p>
+<ul>
+<li>Added <em>WinHttpAutoProxySvc</em> service dump to <strong>@sensor</strong>.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.5.42</h3>
+<p><strong>9/17/2015</strong></p>
+<ul>
+<li>Internal changes for <strong>@sensor</strong>.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.5.4</h3>
+<p><strong>8/25/2015</strong></p>
+<ul>
+<li>Added Schannel Protocols registry dump output to <strong>@sensor</strong>.</li>
+<li>Added alternate CS Agent registry information location output to <strong>@sensor</strong>.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.5.3</h3>
+<p><strong>5/13/2015</strong></p>
+<ul>
+<li>
+New module <strong>@sensor</strong>.
+<ul>
+<li>This module is intended to provide information for troubleshooting and cleaning CrowdStrike Falcon Host sensor installations.</li>
+</ul>
+</li>
+<li>
+Added new pseudo environment variable <strong>%hdnext%</strong>.
+<ul>
+<li>This corresponds to the next physical hard drive (i.e. not network or removable drives) after %systemdrive%.</li>
+<li>If there is no next drive it will translate to &quot;?:&quot;</li>
+<li>For example <em>&quot;%hdnext%\MyFiles&quot;</em> could translate to <em>&quot;D:\MyFiles&quot;</em></li>
+<li>In addition to the places where the other pseudo environment variables are used, this new one can also  be used in <strong>@dirlist</strong> and <strong>@mft</strong>.</li>
+</ul>
+</li>
+<li>
+Added new pseudo environment variable <strong>%hdprev%</strong>.
+<ul>
+<li>Similar to <strong>%hdnext%</strong> above, this variable translates to the hard drive prior to %systemdrive%.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.5.0</h3>
+<p><strong>4/17/2015</strong></p>
+<ul>
+<li>
+New module <strong>@mal</strong> for one-off specific hacking/vulnerability tests.
+<ul>
+<li>This version includes tests for <em>Sticky Keys</em> maliciousness.</li>
+</ul>
+</li>
+<li>
+New <strong>@main</strong> option <strong>-d</strong> to log start, stop and duration of application execution to the registry.
+<ul>
+<li>Using this option will result in the start (&quot;<strong>Start</strong>&quot;), end (&quot;<strong>Stop<strong>&quot;) and duration (&quot;</strong>Duration</strong>&quot;) values being written to the registry at <strong><em>HKLM\Software\CrowdStrike\FFC</em></strong>.</li>
+</ul>
+</li>
+<li>Added <strong>osinstall</strong> entry to the <strong>@system</strong> output section. This represents the date/time when the operating system was installed as derived from the value stored in the registry at <em>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [InstallDate]</em>.</li>
+<li>
+Added process owner fields to <strong>@pslist</strong> output.
+<ul>
+<li>These are <strong>ownersid</strong>, <strong>ownername</strong> and <strong>ownerdomain</strong> representing the process' owner SID, process owner user name and process owner user domain respectively.</li>
+</ul>
+</li>
+<li>Added option <strong>-r</strong> to <strong>@regdump</strong> to enable connection to remote registries.</li>
+<li>
+Added process owner fields to <strong>@pslist</strong> output.
+<ul>
+<li>These are <strong>ownersid</strong>, <strong>ownername</strong> and <strong>ownerdomain</strong> representing the process' owner SID, process owner user name and process owner user domain respectively.</li>
+</ul>
+</li>
+<li>Now using an additional API call to determine file create/access/modified times in the event that the file currently under examination is locked by another process.</li>
+<li>Added <strong>osinstall</strong> entry to the <strong>@system</strong> output section. This represents the date/time when the operating system was installed as derived from the value stored in the registry at <em>HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion [InstallDate]</em>.</li>
+<li>Internal addition to <strong>@regfile</strong> where we now determine if the primary file referenced is <strong>RunDLL32.exe</strong> and if so attempt to extract the file referenced by <em>that</em> and show its details too.</li>
+<li>Now using an additional API call to determine file create/access/modified times in the event that the file currently under examination is locked by another process.</li>
+<li>Better reporting for CAB file processing in the event of an error.</li>
+<li>Corrected issue with detection of app running on a Domain Controller.</li>
+<li>Fixed issue with catalog based digital signatures on Windows 8 and above.</li>
+<li>Fixed bug in <strong>@pslist</strong> when using -x option (<em>For -e, don't dump full resource information</em>)</li>
+<li>Fixed issue with catalog based digital signatures on Windows 8 and above.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.4.0</h3>
+<p><strong>12/19/2014</strong></p>
+<ul>
+<li>New modules <strong>@prefetch</strong>, <strong>@shim</strong> and <strong>@superfetch</strong>.</li>
+<li><strong>@pslist</strong> option <strong>-t</strong> (<em>check for thread injection</em>) is now option <strong>-i</strong>.</li>
+<li><strong>@pslist</strong> option <strong>-j</strong> (<em>do MD5 hashes</em>) is now option <strong>-m</strong>.</li>
+<li><strong>@pslist</strong> option <strong>-m</strong> (<em>enumerate loaded modules for each process</em>) is now option <strong>-o</strong></li>
+<li><strong>@pslist</strong> option <strong>-r</strong> (<em>don't dump full resource information</em>) is now option <strong>-x</strong></li>
+<li><strong>@pslist</strong> added option -z (<em>don't hash files larger than &lt;size&gt;</em>)</li>
+<li>Removed redundant XML path <em>tool_PSList/processes/process/peinfo/file/name</em> for <strong>@pslist</strong>.</li>
+<li>
+Several new <strong>options</strong> added to <strong>@regfile</strong> module, replacing the hard coded features previously in place
+<ul>
+<li><strong>-c</strong> Verify digital signature of service modules</li>
+<li><strong>-h</strong> Do SHA256 hashes</li>
+<li><strong>-m</strong> Do MD5 hashes</li>
+<li><strong>-q</strong> Perform &quot;quick&quot; hash of only the 1st 512 bytes of the file</li>
+<li><strong>-r</strong> Display application resource information</li>
+<li><strong>-t</strong> Display file create, modified and accessed times</li>
+<li><strong>-z</strong> &lt;size&gt; Don't hash files greater than this size in megabytes</li>
+</ul>
+</li>
+<li>Recommended options for <strong>@regfile</strong> should now then be <strong>@regfile -c -h -m -r -t</strong></li>
+<li>Certificate checking in all modules now also checks the Windows Security catalogs for signing along with the original tests for embedded signatures. Because of this there is now a <strong><em>&lt;cert_type&gt;</em></strong> XML field emitted and present in the converted files in <em>CRConvert</em>.</li>
+<li>Certificate checking should now no longer reach out to the network when performing revocation checks. This is a speed optimization. Validation is now only performed using information cached by the operating system.</li>
+<li>New <strong>@yara</strong> option <strong><em>-# &lt;section&gt;</em></strong> that can be used to specify a particular built-in config <strong>[&lt;SECTION:yara&gt;]</strong> section, indexed from zero. Using this feature you can now use the same config file but reference different YARA script sections within that config file for each @yara instance.</li>
+<li>Fixed bug in <strong>@superfetch</strong> where there was a missing XML container element (&quot;<em>appentries</em>&quot;) when run on certain platforms. </li>
+<li>
+Several new <strong>options</strong> added to <strong>@drivers</strong> module, replacing the hard coded features previously in place
+<ul>
+<li><strong>-c</strong> Verify digital signature of service modules</li>
+<li><strong>-h</strong> Do SHA256 hashes</li>
+<li><strong>-m</strong> Do MD5 hashes</li>
+<li><strong>-q</strong> Perform &quot;quick&quot; hash of only the 1st 512 bytes of the file</li>
+<li><strong>-r</strong> Display application resource information</li>
+<li><strong>-t</strong> Display file create, modified and accessed times</li>
+<li><strong>-z</strong> &lt;size&gt; Don't hash files greater than this size in megabytes</li>
+</ul>
+</li>
+<li>Recommended options for <strong>@drivers</strong> should now then be <strong>@drivers -c -h -m -r -t</strong></li>
+<li>Added new field <strong>lastRegWriteTime</strong> to <strong>@regdump</strong> and <strong>@regfile</strong> output for the parent key, representing the last time (UTC) the key was written to.</li>
+<li>Fixed behavior of <strong>@dirlist -z</strong> option (<em>&quot;Don't hash files greater than this size in megabytes&quot;</em>) such that if a file is above this limit we still emit the other details for the file instead of skipping the file altogether.</li>
+<li>If <strong>@dirlist</strong> option <strong>-z</strong> as described above is used, the file hash values will be shown as <strong>[ignored]</strong> in the event that a file is larger than the specified value.</li>
+<li>In the event that a file cannot be accessed in <strong>@dirlist</strong>, the file hash values will show as <strong>[error]</strong></li>
+<li>Reverted change for <strong>@dirlist</strong> file attributes output. We now again emit <strong>0xffffffff</strong> if the file cannot be accessed. In addition the XML <strong><em>str</em></strong> value for the file attribute will show <strong>[error]</strong> in this case.   </li>
+<li>Added <strong>isAdmin</strong> field to <strong>System</strong> XML section. This signifies whether the application was launched with admin privileges or not.</li>
+<li>Added <strong>option -v</strong> to <strong>@pslist</strong> to enumerate DLLs used by <em>svchost.exe</em> processes. Note that this option is redundant and will be ignored when used in conjunction with option -m (enumerate loaded modules) since loaded modules would include the same DLLs. Option -v is only really useful if you <em>only</em> want to see what DLLs a svchost.exe process is utilizing.</li>
+<li>Improved responsiveness to HTTP errors when uploading. </li>
+<li>@prefetch - New option <strong>-t</strong> to translate paths. See below.</li>
+<li>@superfetch - New option <strong>-t</strong> to translate paths. See below.</li>
+<li>When reading a config file all <strong>carriage-return linefeed</strong> line endings (0x0d [\r] 0x0a [\n]) are now <strong>replaced</strong> with <strong>linefeed</strong> characters (0x0a [\n]). This is a workaround for a bug/feature in the YARA library when processing hex strings where it was not including carriage-return characters as white space.</li>
+<li>
+Significant <strong>reduction</strong> in memory usage for <strong>@YARA</strong> module when scanning process memory. This is a change to the actual YARA library code.
+<ul>
+<li>Instead of creating a copy of <em>all</em> allocated memory regions for the process and then applying rules to that large duplicated collection in a batch, I now only copy and apply rules to each individual region one at a time.</li>
+<li>The original mechanism effectively consumed twice the amount of memory that the process was using. This new method will only duplicate the largest region size, which is almost always significantly smaller than the entire process' memory.</li>
+<li>In addition I utilize a single allocated buffer to store the copied memory region, releasing the memory and dynamically increasing its size only when a larger region is encountered. This reduces memory allocation/release thrashing.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>File paths that start with e.g. &quot;<em>\device\harddiskvolumeX\dir\file.exe</em>&quot; are now translated into their logical drive paths e.g. &quot;<em>C:\dir\file.exe</em>&quot;. Prefetch paths for example are now shown in this manner.</p>
+</blockquote>
+<hr />
+<h3>CrowdResponse - 1.0.3.1</h3>
+<p><strong>10/6/2014</strong></p>
+<ul>
+<li>When reading a config file all <strong>carriage-return linefeed</strong> line endings (0x0d [\r] 0x0a [\n]) are now <strong>replaced</strong> with <strong>linefeed</strong> characters (0x0a [\n]). This is a workaround for a bug/feature in the YARA library when processing hex strings where it was not including carriage-return characters as white space.</li>
+<li>
+Significant <strong>reduction</strong> in memory usage for <strong>@YARA</strong> module when scanning process memory. This is a change to the actual YARA library code.
+<ul>
+<li>Instead of creating a copy of <em>all</em> allocated memory regions for the process and then applying rules to that large duplicated collection in a batch, we now only copy and apply rules to each individual region one at a time.</li>
+<li>The original mechanism effectively consumed twice the amount of memory that the process was using. This new method will only duplicate the largest region size, which is almost always significantly smaller than the entire process' memory.</li>
+<li>In addition we utilize a single allocated buffer to store the copied memory region, releasing the memory and dynamically increasing its size only when a larger region is encountered. This reduces memory allocation/release thrashing.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.3.0</h3>
+<p><strong>8/19/2014</strong></p>
+<ul>
+<li>New module <strong>@RegDump</strong> for dumping registry items.</li>
+<li>New module <strong>@RegFile</strong> for finding and reporting of registry entries referring to files.</li>
+<li>Added support for web proxy servers using <strong>-y</strong>.</li>
+<li>@main option -i (load config from file) can now also specify a URL as the target to download the config file from the provided location.</li>
+<li>New pseudo environment variable <strong>%ad%</strong> that represents the application's directory. It expands to a directory path including the trailing back-slash '\'.</li>
+<li>New pseudo environment variable <strong>%ve%</strong> for use in output file naming. This will emit the application product version e.g. &quot;1.0.3.0&quot;.</li>
+<li>You can use pseudo environment variables for the input config file now, although only the new %ad% really makes sense. This latter case can be useful when running the tool as another user (<em>RunAs</em>) when the <em>current directory</em> often ends up being something like &quot;<em>C:\Windows\System32</em>&quot; thus preventing you from locating files that were not referenced by their full path.</li>
+<li>Changed file open sharing permissions on the output XML file to prevent multiple instances from writing to the same file.</li>
+<li>Fix for self destruct (-x) not working when EXE is run from a different volume than where the system's temporary directory resides.</li>
+<li>Revamped and simplified the self-destruct code (main option <em>-x</em>) to make it far more robust. It was discovered that previously a copy of the application could occasionally be found in the system's temp directory.</li>
+<li>Accommodated situations in modules such as @dirlist where we could be tricked into reporting incorrect file meta-data information in certain cases. An example is if a file name is created with a trailing space character. Most regular Windows API functions will strip away the space prior to processing the name and thus potentially then refer to a different file name. The solution is to use extended file references (adding '\\?\' to the start of the name) to force the use of the raw name. Note that even then not all Windows API functions operate correctly, notably the <em>GetFileVersion()</em> function used to obtain version information from a file that will still be fooled by the example given.</li>
+<li>If an input config file is specified without a full path and it is not found in the <em>current directory</em> when the application starts it will attempt to locate it in the application's directory.</li>
+<li>Both the input config file path (-i) and output file path (-o) can now also utilize regular system environment variables.</li>
+<li>Additional output is shown in the event the application executable file(s) cannot be deleted when the self-destruct (-x) option is used.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.0.1</h3>
+<p><strong>3/13/2014</strong></p>
+<ul>
+<li>Fixed option -c where code that acted upon the flag had been inadvertently compiled out for the <em>CrowdResponse</em> version of the code.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - 1.0.0.0 (Temporary Version)</h3>
+<p><strong>3/6/2014</strong></p>
+<ul>
+<li>Version set to 1.0.0.0 for tool release.</li>
+<li>Change resources product description to &quot;<em>Static Host Data Collection Tool</em>&quot;</li>
+</ul>
+<hr />
+<h3>CrowdResponse - Version 1.0.0.87</h3>
+<p><strong>2/22/2014</strong></p>
+<ul>
+<li>Included @main option -c in usage output.</li>
+<li>Included @main option -e in readme.html document.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - Version 1.0.0.87</h3>
+<p><strong>2/21/2014</strong></p>
+<ul>
+<li>Changed all references to [ yara, Yara] to YARA in both code and documentation.</li>
+<li>Added CrowdStrike URL to usage output.</li>
+</ul>
+<hr />
+<h3>CrowdResponse - Version 1.0.0.86</h3>
+<p><strong>2/21/2014</strong></p>
+<ul>
+<li>Changed XML element &quot;id&quot; in @pslist to &quot;pid&quot;.</li>
+<li>Changed default file mask for -f in @Yara to <em>.</em></li>
+<li>Added missing link to @Yara section in CrowdResponse readme.html file.</li>
+<li>Added new section &quot;A Note on File Masks and Filters&quot; to readme.html.</li>
+</ul>
+<hr />
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
